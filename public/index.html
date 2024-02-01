@@ -7,80 +7,185 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="text-gray-600 font-poppins">
-    <div>
+    <div class="grid grid-cols-1 lg:grid-cols-5">
         <div>
-          <div class="container mx-auto border-b border-gray-200 px-3">
-            <nav class="flex justify-between items-center">
-              <div>
+          <div class="container mx-auto md:col-span-1 lg:flex lg:justify-end">
+            <nav class="text-right">
+              <div class="flex lg:block justify-between items-center">
                 <h1 class="font-bold uppercase p-4">
-                  <a href="#" class="text-sm md:text-xl">Tailwind</a>
+                  <a href="#" class="text-md md:text-xl">Tailwind</a>
                 </h1>
+                <div class="px-4 cursor-pointer block lg:hidden">
+                  <svg onclick="document.querySelector('.menu').classList.toggle('hidden')" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>                  
+                </div>
               </div>
-              <ul class="flex gap-10">
-                <li class="text-gray-900">
-                  <a href="#">
-                    <span>Home</span>
+              <ul class="hidden menu lg:block px-4 md:px-0 gap-16">
+                <li class="text-gray-900 py-1 border-r-4 border-primary pr-3">
+                  <a href="#" class="">
+                    <span class="flex gap-2.5 justify-end">
+                      Home
+                      <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                  </span>
                   </a>
                 </li>
-                <li>
+                <li class="text-gray-900 py-1 border-r-4 pr-3">
                   <a href="#">
-                    <span>About</span>
+                    <span class="flex gap-2.5 justify-end">
+                      About
+                      <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                    </svg>
+                  </span>
                   </a>
                 </li>
-                <li>
+                <li class="text-gray-900 py-1 border-r-4 pr-3">
                   <a href="#">
-                    <span>Contact</span>
+                    <span class="flex gap-2.5 justify-end">
+                      Contact
+                      <svg enter-class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                    </svg>
+                  </span>
                   </a>
                 </li>
+
               </ul>
             </nav>
           </div>
         </div>
       
-        <main class="px-16 py-6">
+        <main class="px-10 md:px-16 py-6 bg-gray-100 col-span-4 h-full">
           <div class="container mx-auto">
-            <div class="flex justify-center md:justify-end gap-5">
-              <a href="#" class="text-primary">Log in</a>
-              <a href="#">Sign up</a>
-            </div>
             
             <!-- <div class="flex items-center justify-center">
               <div class="bg-red-500 h-4 w-6"></div>
               <div class="bg-blue-500 h-8 w-6"></div>
               <div class="bg-green-500 h-12 w-6"></div>
             </div> -->
-  
-            <header>
-              <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
-              <h3 class="text-2xl font-semibold">For Tailwind</h3>
+            <div class="flex justify-end gap-5">
+              <a href="#" class="btn border-primary border-2 bg-primary text-white px-8">Log in</a>
+              <a href="#" class="btn border-primary border-2 hover:bg-primary hover:text-white transition ease-in duration-100">Sign up</a>
+            </div>
+            <header class="mt-12">
+              <div class="md:order-2">
+                <h2 class="text-gray-700 text-6xl font-semibold mb-4">Recipes</h2>
+                <h3 class="text-2xl font-semibold">For Tailwind</h3>
+              </div>
             </header>
       
             <div>
               <h4 class="font-bold border-b border-gray-200 mt-12 mb-2 pb-2">Latest Recipes</h4>
         
-              <div class="mt-8">
+              <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- cards go here -->
-                <div> 
-                  <img src="images/1.png" alt="stew">
-                  <div>
-                    <span>5 Bean Chili Stew</span>
-                    <span>Recipe by Mario</span>
+                <div class="bg-white rounded overflow-hidden shadow-md relative">
+                  <span class="absolute z-10 top-3 left-3 inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+                    <svg class="w-5 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    15 mins
+                  </span>
+                  <div class="overflow-hidden">
+                    <img src="images/15.png" alt="stew" class="w-full h-80 sm:h-80 object-cover hover:scale-110 transition-all">
+                  </div>
+                  <div class="p-4">
+                    <span class="font-bold">5 Bean Chili Stew</span>
+                    <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+                  </div>
+                </div>
+                <div class="bg-white rounded overflow-hidden shadow-md relative">
+                  <span class="absolute z-10 top-3 left-3 inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+                    <svg class="w-5 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    15 mins
+                  </span>
+                  <div class="overflow-hidden">
+                    <img src="images/16.png" alt="stew" class="w-full h-80 sm:h-80 object-cover hover:scale-110 transition-all">
+                  </div>
+                  <div class="p-4">
+                    <span class="font-bold">9 Bean Chili Stew</span>
+                    <span class="block text-gray-500 text-sm">Recipe by TT</span>
+                  </div>
+                </div>
+                <div class="bg-white rounded overflow-hidden shadow-md relative">
+                  <span class="absolute z-10 top-3 left-3 inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+                    <svg class="w-5 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    15 mins
+                  </span>
+                  <div class="overflow-hidden">
+                    <img src="images/17.png" alt="stew" class="w-full h-80 sm:h-80 object-cover hover:scale-110 transition-all">
+                  </div>
+                  <div class="p-4">
+                    <span class="font-bold">10 Bean Chili Stew</span>
+                    <span class="block text-gray-500 text-sm">Recipe by FF</span>
                   </div>
                 </div>
               </div>
       
               <h4 class="font-bold border-b border-gray-200 mt-12 mb-2 pb-2">Most Popular</h4>
       
-              <div class="mt-8">
+              <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- cards go here -->
+                <div class="bg-white rounded overflow-hidden shadow-md relative">
+                  <span class="absolute z-10 top-3 left-3 inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+                    <svg class="w-5 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    15 mins
+                  </span>
+                  <div class="overflow-hidden">
+                    <img src="images/17.png" alt="stew" class="w-full h-80 sm:h-80 object-cover hover:scale-110 transition-all">
+                  </div>
+                  <div class="p-4">
+                    <span class="font-bold">5 Bean Chili Stew</span>
+                    <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+                  </div>
+                </div>
+                <div class="bg-white rounded overflow-hidden shadow-md relative">
+                  <span class="absolute z-10 top-3 left-3 inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+                    <svg class="w-5 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    15 mins
+                  </span>
+                  <div class="overflow-hidden">
+                    <img src="images/15.png" alt="stew" class="w-full h-80 sm:h-80 object-cover hover:scale-110 transition-all">
+                  </div>
+                  <div class="p-4">
+                    <span class="font-bold">9 Bean Chili Stew</span>
+                    <span class="block text-gray-500 text-sm">Recipe by TT</span>
+                  </div>
+                </div>
+                <div class="bg-white rounded overflow-hidden shadow-md relative">
+                  <span class="absolute z-10 top-3 left-3 inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+                    <svg class="w-5 mr-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    15 mins
+                  </span>
+                  <div class="overflow-hidden">
+                    <img src="images/16.png" alt="stew" class="w-full h-80 sm:h-80 object-cover hover:scale-110 transition-all">
+                  </div>
+                  <div class="p-4">
+                    <span class="font-bold">10 Bean Chili Stew</span>
+                    <span class="block text-gray-500 text-sm">Recipe by FF</span>
+                  </div>
+                </div>
               </div>
             </div>
       
-            <div class="flex justify-center">
-              <div class="text-white bg-secondary-100 md:bg-blue-300 xl:bg-purple-400 hover:bg-red-400 text-center rounded py-2 px-5 cursor-pointer transition-all">Load more</div>
+            <div class="flex justify-center mt-16">
+              <div class="text-white bg-secondary-100 md:bg-blue-300 xl:bg-purple-400 hover:bg-red-400 hover:shadow-inner text-center rounded-full py-2 px-5 cursor-pointer transition-all">Load more</div>
             </div>    
           </div>
         </main>
-
+    </div>
 </body>
 </html>
